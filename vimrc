@@ -36,6 +36,8 @@ autocmd BufWritePre *.html :%s/\s\+$//e
 autocmd BufWritePre *.markdown :%s/\s\+$//e
 autocmd BufWritePre *.tex :%s/\s\+$//e
 
+autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
+
 "set textwidth=0     " maximum width of text that is being inserted
 "set wrapmargin=120  " number representing the maximum allowed width of a line
 
