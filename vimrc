@@ -30,6 +30,8 @@ set list
 autocmd BufWritePre *.py :%s/\s\+$//e
 autocmd BufWritePre *.rb :%s/\s\+$//e
 autocmd BufWritePre *.php :%s/\s\+$//e
+autocmd BufWritePre *.js :%s/\s\+$//e
+autocmd BufWritePre *.ts :%s/\s\+$//e
 autocmd BufWritePre *.json :%s/\s\+$//e
 autocmd BufWritePre *.feature :%s/\s\+$//e
 autocmd BufWritePre *.html :%s/\s\+$//e
@@ -37,6 +39,10 @@ autocmd BufWritePre *.markdown :%s/\s\+$//e
 autocmd BufWritePre *.tex :%s/\s\+$//e
 
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
+autocmd Filetype typescript setlocal ts=2 sw=2 expandtab
+autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
+
+let g:jsx_ext_required = 0
 
 "set textwidth=0     " maximum width of text that is being inserted
 "set wrapmargin=120  " number representing the maximum allowed width of a line
