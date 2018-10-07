@@ -9,6 +9,7 @@ set autoindent      " always set autoindenting on
 set hlsearch        " highlight searches
 set incsearch       " do incremental searching
 set relativenumber  " show line numbers
+set number          " show current line number
 set ignorecase      " ignore case when searching
 set title           " set title in console title bar
 set ruler           " show the line and column number of the cursor position.
@@ -27,20 +28,19 @@ syntax on            " syntax highlighting
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 set list
 
-autocmd BufWritePre *.py :%s/\s\+$//e
-autocmd BufWritePre *.rb :%s/\s\+$//e
-autocmd BufWritePre *.php :%s/\s\+$//e
-autocmd BufWritePre *.js :%s/\s\+$//e
-autocmd BufWritePre *.ts :%s/\s\+$//e
-autocmd BufWritePre *.json :%s/\s\+$//e
-autocmd BufWritePre *.feature :%s/\s\+$//e
-autocmd BufWritePre *.html :%s/\s\+$//e
-autocmd BufWritePre *.markdown :%s/\s\+$//e
-autocmd BufWritePre *.tex :%s/\s\+$//e
+autocmd BufWritePre * :%s/\s\+$//e
 
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
 autocmd Filetype typescript setlocal ts=2 sw=2 expandtab
 autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
+autocmd Filetype html setlocal ts=2 sw=2 expandtab
+autocmd Filetype css setlocal ts=2 sw=2 expandtab
+autocmd Filetype tex setlocal ts=2 sw=2 expandtab
+autocmd Filetype yaml setlocal ts=2 sw=2 expandtab
+autocmd Filetype graphql setlocal ts=2 sw=2 expandtab
+autocmd Filetype sh setlocal ts=2 sw=2 expandtab
+autocmd Filetype go setlocal ts=4 sw=4 expandtab
+autocmd Filetype python setlocal ts=4 sw=4 expandtab
 
 let g:jsx_ext_required = 0
 
@@ -51,10 +51,9 @@ map <Up>    <NOP>
 map <Down>  <NOP>
 map <Left>  <NOP>
 map <Right> <NOP>
-
 inoremap <Up>    <NOP>
 inoremap <Down>  <NOP>
 inoremap <Left>  <NOP>
 inoremap <Right> <NOP>
 
-"execute pathogen#infect()
+execute pathogen#infect()
