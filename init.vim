@@ -72,4 +72,5 @@ Plug 'fatih/vim-go'
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdcommenter'
 Plug 'kiddos/malokai.vim'
+Plug 'tpope/vim-surround'
 call plug#end()
